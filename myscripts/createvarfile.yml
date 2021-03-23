@@ -1,0 +1,9 @@
+---
+- hosts: app
+  vars: 
+    my_content: "THis file created using var concept"
+  tasks:
+  - copy:
+     dest: /tmp/var_file.txt
+     content: "{{ my_content }}"
+

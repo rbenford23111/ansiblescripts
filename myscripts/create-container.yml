@@ -1,0 +1,10 @@
+- name: docker creation
+  hosts: localhost
+  tasks:
+  - name: Ensure docker container start
+    docker_container:
+      image: python
+      interactive: yes
+      name: "{{ item }}"
+      state: started
+    loop: "{{ query('inventory_hostnames', 'containers') }}"

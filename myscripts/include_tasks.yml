@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+  - name: configure apache server
+    include: apache.yml
+  - name: install nmap
+    include: nmap.yml 
+  - name: install vsftpd
+    include: vsftpd.yml
+

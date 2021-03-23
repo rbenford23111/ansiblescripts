@@ -1,0 +1,16 @@
+---
+- name: install apache
+  hosts: all:children
+  tasks:
+  - name: httpd install
+    yum:
+      name: httpd
+      state: absent
+  - name: Create index.html page
+    copy: 
+      dest: /var/www/html/inex.html
+      content: "Created by Ansible"
+ #     name: Start httpd service
+  - service: 
+      name: httpd
+      state: restarted

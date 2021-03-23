@@ -1,0 +1,13 @@
+---
+- name: selinux enable or disable
+  hosts: all 
+  vars: 
+     status: disabled
+  tasks:
+    - name: Changing Selinux from config file
+      lineinfile:
+         path: /etc/selinux/config
+         regexp: '^SELINUX='
+         line: 'SELINUX={{ status }}'                               
+# Allows you to change data in a line that begin with a particular WORD
+# Using regexp '^SELINUX='

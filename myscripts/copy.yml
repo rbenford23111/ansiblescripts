@@ -1,0 +1,12 @@
+---
+- name: copy file
+  hosts: 192.168.60.5
+  vars:
+     src: test222.txt
+     dest: /home/vagrant/test222.txt 
+    
+  tasks:
+  - name: file copy
+    copy:
+      src: "{{ src }}"
+      dest: "{{ dest }}"

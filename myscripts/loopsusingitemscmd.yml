@@ -1,0 +1,21 @@
+---
+- name: Install multiple packages
+  hosts: app2
+  tasks:
+    - name: Install packages
+      yum: name={{item}} state=present
+      with_items:
+      - make
+      - gcc
+      - wget
+      - httpd
+
+# Starting multiple services
+  
+    - service: name={{item}} state=restarted
+      with_items:
+      - httpd
+      - sshd
+    
+    - name: Confirm httpd running
+       command: service

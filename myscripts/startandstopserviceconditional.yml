@@ -1,0 +1,11 @@
+---
+- name: start and stop services
+  hosts: all:children
+  tasks:
+    - service: name=httpd state=restarted
+      when: ansible_host == "192.168.60.7"
+
+    - service: name=sshd state=restarted
+      when: ansible_host == "192.168.60.8"
+...
+    

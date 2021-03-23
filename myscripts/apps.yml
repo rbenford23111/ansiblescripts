@@ -1,0 +1,6 @@
+---
+- name: install nmap form var
+  hosts: 192.168.60.5
+  vars_files:
+    - nmap_vars.yml
+       

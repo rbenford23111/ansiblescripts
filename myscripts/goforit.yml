@@ -1,0 +1,6 @@
+- name: test  
+  hosts: app
+  tasks:
+  - copy:
+      src: doit.txt
+      dest: /tmp

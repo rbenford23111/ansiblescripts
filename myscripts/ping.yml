@@ -1,0 +1,12 @@
+---
+- name: ping test
+  hosts: all
+  tasks:
+    - name: ping
+      ping:
+
+    - name: install nmap
+      yum:
+        name: nmap
+        state: absent
+     

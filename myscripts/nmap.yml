@@ -1,0 +1,5 @@
+---
+- name: install nmap
+  yum:
+    name: nmap
+    state: present
