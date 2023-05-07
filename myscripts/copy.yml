@@ -1,6 +1,6 @@
 ---
 - name: copy file
-  hosts: 192.168.60.5
+  hosts: dev
   vars:
      src: test222.txt
      dest: /tmp/test222.txt 
