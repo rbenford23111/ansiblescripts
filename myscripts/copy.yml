@@ -1,6 +1,7 @@
 ---
 - name: copy file
   hosts: dev
+  become: true
   vars:
      src: test222.txt
      dest: /tmp/test222.txt 
