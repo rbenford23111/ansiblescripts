@@ -1,6 +1,6 @@
 ---
 - name: copy file
-  hosts: localhost
+  hosts: All
   vars:
      src: test222.txt
      dest: /tmp/test222.txt 
