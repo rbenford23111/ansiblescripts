@@ -1,6 +1,6 @@
 ---
 - name: copy file
-  hosts: dev
+  hosts: pronixsplunktest01.imanheim.net
   vars:
      src: test222.txt
      dest: /tmp/test222.txt 
